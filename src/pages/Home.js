@@ -1,18 +1,22 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {ScrollView, Text} from 'react-native';
+// Styles
 import {COLORS} from '../../constants/theme';
+// Components
 import Header from '../components/Header';
+import Categories from '../components/Categories';
 
 const Home = () => {
   return (
-    <SafeAreaView
+    <ScrollView
       style={{
         flex: 1,
         backgroundColor: COLORS.white,
       }}>
       <Header />
+      <Categories />
       <Text>Home</Text>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 
