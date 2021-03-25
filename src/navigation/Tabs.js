@@ -6,6 +6,7 @@ import {
 import Home from '../pages/Home';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {COLORS} from '../../constants/theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,7 +17,7 @@ const Tabs = () => {
       tabBarOptions={{
         showLabel: false,
         style: {
-          backgroundColor: '#0B1423',
+          backgroundColor: COLORS.primary,
           height: 70,
         },
       }}>
@@ -25,10 +26,10 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({color, size, focused}) => (
+          tabBarIcon: ({focused}) => (
             <MaterialCommunityIcons
               name={!focused ? 'home-outline' : 'home'}
-              color="#ffffff"
+              color={COLORS.white}
               size={25}
             />
           ),
@@ -39,10 +40,10 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarLabel: 'Cart',
-          tabBarIcon: ({color, size, focused}) => (
+          tabBarIcon: ({focused}) => (
             <MaterialCommunityIcons
               name={!focused ? 'cart-outline' : 'cart'}
-              color="#ffffff"
+              color={COLORS.white}
               size={25}
             />
           ),
@@ -53,10 +54,10 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarLabel: 'Wishlist',
-          tabBarIcon: ({color, size, focused}) => (
+          tabBarIcon: ({focused}) => (
             <MaterialCommunityIcons
               name={!focused ? 'heart-outline' : 'heart'}
-              color="#ffffff"
+              color={COLORS.white}
               size={25}
             />
           ),
@@ -67,10 +68,10 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarLabel: 'Account',
-          tabBarIcon: ({color, size, focused}) => (
+          tabBarIcon: ({focused}) => (
             <MaterialCommunityIcons
               name={!focused ? 'account-outline' : 'account'}
-              color="#ffffff"
+              color={COLORS.white}
               size={25}
             />
           ),

@@ -1,11 +1,18 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
+import {COLORS} from '../../constants/theme';
+import Header from '../components/Header';
 
 const Home = () => {
   return (
-    <View>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: COLORS.white,
+      }}>
+      <Header />
       <Text>Home</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
