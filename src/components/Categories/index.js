@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {ActivityIndicator, ScrollView, Text, View} from 'react-native';
 import {useQuery} from 'react-query';
 import {SIZES} from '../../../constants/theme';
@@ -7,9 +7,8 @@ import CategoryItem from '../CategoryItem';
 const getCategories = async () =>
   await (await fetch('https://fakestoreapi.com/products/categories')).json();
 
-const Categories = () => {
+const Categories = ({active, setActive}) => {
   const {data, isLoading, error} = useQuery('categories', getCategories);
-  const [active, setActive] = useState('All');
 
   if (isLoading) return <ActivityIndicator />;
 

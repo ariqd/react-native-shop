@@ -2,10 +2,7 @@ import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import {COLORS, SIZES} from '../../../constants/theme';
 
-const capitalizeFirstLetter = string =>
-  string[0].toUpperCase() + string.slice(1);
-
-const CategoryItem = ({item, index, active, setActive, customStyles}) => (
+const CategoryItem = ({item, active, setActive, customStyles}) => (
   <TouchableOpacity
     style={{
       padding: SIZES.padding,
@@ -20,8 +17,9 @@ const CategoryItem = ({item, index, active, setActive, customStyles}) => (
       style={{
         color: active === item ? COLORS.secondary : COLORS.darkgray,
         textAlign: 'center',
+        textTransform: 'capitalize',
       }}>
-      {capitalizeFirstLetter(item)}
+      {item}
     </Text>
   </TouchableOpacity>
 );
