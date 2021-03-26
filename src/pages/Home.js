@@ -5,6 +5,8 @@ import {COLORS} from '../../constants/theme';
 // Components
 import Header from '../components/Header';
 import Categories from '../components/Categories';
+import Recommended from '../components/Recommended';
+import TopCollection from '../components/TopCollection';
 
 const Home = () => {
   return (
@@ -15,7 +17,8 @@ const Home = () => {
       }}>
       <Header />
       <Categories />
-      <Text>Home</Text>
+      <Recommended />
+      <TopCollection />
     </ScrollView>
   );
 };

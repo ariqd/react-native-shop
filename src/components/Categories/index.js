@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {ActivityIndicator, ScrollView, Text, View} from 'react-native';
 import {useQuery} from 'react-query';
 import {SIZES} from '../../../constants/theme';
@@ -9,13 +9,7 @@ const getCategories = async () =>
 
 const Categories = () => {
   const {data, isLoading, error} = useQuery('categories', getCategories);
-  const [active, setActive] = useState();
-
-  useEffect(() => {
-    if (data.length > 0 && !isLoading && !error) {
-      setActive('All');
-    }
-  }, []);
+  const [active, setActive] = useState('All');
 
   if (isLoading) return <ActivityIndicator />;
 
